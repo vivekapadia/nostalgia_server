@@ -1,0 +1,2 @@
+npm init
+npm install body-parser cors express mongoose nodemon dotenv
