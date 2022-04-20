@@ -14,6 +14,10 @@ app.use(cors());
 
 app.use("/posts", postRoutes);
 
+app.get("/", (req, res) => {
+	res.send("Hello to Nostalgia API");
+});
+
 // heroku || local
 const PORT = process.env.PORT || 5000;
 const CONNECTION_URL = process.env.CONNECTION_URL;
