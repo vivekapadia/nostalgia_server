@@ -3,7 +3,10 @@ import jwt from "jsonwebtoken";
 
 import UserModal from "../models/user.js";
 
-const secret = "test";
+import dotenv from "dotenv";
+dotenv.config();
+
+const secret = process.env.SECERT_KEY;
 
 export const signin = async (req, res) => {
 	const { email, password } = req.body;
